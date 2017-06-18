@@ -7,7 +7,7 @@ import java.util.Locale;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.threelistviewtest.db.CoolWeatherDB;
+import com.threelistviewtest.db.tqiDB;
 import com.threelistviewtest.model.City;
 import com.threelistviewtest.model.County;
 import com.threelistviewtest.model.Province;
@@ -23,7 +23,7 @@ public class Utility {
 	 * 解析和处理服务器返回的省级数据
 	 */
 	public synchronized static boolean handleProvincesResponse(
-			CoolWeatherDB coolWeatherDB, String response) {
+			tqiDB coolWeatherDB, String response) {
 		if (!TextUtils.isEmpty(response)) {
 			String[] allProvinces = response.split(",");
 			if (allProvinces != null && allProvinces.length > 0) {
@@ -44,7 +44,7 @@ public class Utility {
 	/**
 	 * 解析和处理服务器返回的市级数据
 	 */
-	public static boolean handleCitiesResponse(CoolWeatherDB coolWeatherDB,
+	public static boolean handleCitiesResponse(tqiDB coolWeatherDB,
 			String response, int provinceId) {
 		if (!TextUtils.isEmpty(response)) {
 			String[] allCities = response.split(",");
@@ -67,7 +67,7 @@ public class Utility {
 	/**
 	 * 解析和处理服务器返回的县级数据
 	 */
-	public static boolean handleCountiesResponse(CoolWeatherDB coolWeatherDB,
+	public static boolean handleCountiesResponse(tqiDB coolWeatherDB,
 			String response, int cityId) {
 		if (!TextUtils.isEmpty(response)) {
 			String[] allCounties = response.split(",");

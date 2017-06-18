@@ -43,8 +43,8 @@ public final class R {
         public static final int weather_info_layout=0x7f080007;
     }
     public static final class layout {
-        public static final int choose_area=0x7f030000;
-        public static final int weather_layout=0x7f030001;
+        public static final int activity1=0x7f030000;
+        public static final int activity2=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;

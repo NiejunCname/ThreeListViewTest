@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.threelistviewtest.activity.ChooseAreaActivity"
+            android:name="com.threelistviewtest.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.threelistviewtest.activity.WeatherActivity"></activity>
-        <service android:name="com.threelistviewtest.service.AutoUpdateService"></service>
-        <receiver android:name="com.threelistviewtest.receiver.AutoUpdateReceiver"></receiver>
+        <activity android:name="com.threelistviewtest.activity.TwoActivity"></activity>
+        <service android:name="com.threelistviewtest.service.UpdateService"></service>
+        <receiver android:name="com.threelistviewtest.receiver.UpdateReceiver"></receiver>
     </application>
 
 </manifest>

@@ -12,7 +12,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class CoolWeatherDB {
+public class tqiDB {
 
 	/**
 	 * 数据库名
@@ -24,15 +24,15 @@ public class CoolWeatherDB {
 	 */
 	public static final int VERSION = 1;
 
-	private static CoolWeatherDB coolWeatherDB;
+	private static tqiDB coolWeatherDB;
 
 	private SQLiteDatabase db;
 
 	/**
 	 * 将构造方法私有化
 	 */
-	private CoolWeatherDB(Context context) {
-		CoolWeatherOpenHelper dbHelper = new CoolWeatherOpenHelper(context,
+	private tqiDB(Context context) {
+		tqiOpenHelper dbHelper = new tqiOpenHelper(context,
 				DB_NAME, null, VERSION);
 		db = dbHelper.getWritableDatabase();
 	}
@@ -40,9 +40,9 @@ public class CoolWeatherDB {
 	/**
 	 * 获取CoolWeatherDB的实例。
 	 */
-	public synchronized static CoolWeatherDB getInstance(Context context) {
+	public synchronized static tqiDB getInstance(Context context) {
 		if (coolWeatherDB == null) {
-			coolWeatherDB = new CoolWeatherDB(context);
+			coolWeatherDB = new tqiDB(context);
 		}
 		return coolWeatherDB;
 	}
